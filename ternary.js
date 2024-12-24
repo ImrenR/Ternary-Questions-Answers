@@ -82,15 +82,56 @@ console.log(`Congrats you recevied discount your new price is ${newPrice} `);
 //? Question 7 :User Membership Status: If a user is a member, display "Member login successful"; 
 //? if not, display "Guest login." Additionally, if the user is a member, check whether their status is active or inactive.
 
+const isMember = true;
+const isActive=false;
+
+const loginStatus= isMember
+?isActive
+ ? "Member login successful and active"
+ : "Member login successful but inactive"
+:"Guest login";
+console.log(loginStatus);
 
 //? Question 8 :Comparison of Two Values: Compare two numbers and return "Both are equal,"
 //?  "The first is greater," or "The second is greater."
 
+const firstPerson = 90
+const secondPerson =30
+
+const personValues = firstPerson === secondPerson
+? "Both are equal"
+:firstPerson > secondPerson
+?"The first is greater"
+:"The second is greater.";
+console.log(personValues);
 
 //? Question 9 : Course Selection: Based on a student’s course selection, determine the level as 
 //? "Basic," "Intermediate," or "Advanced" (Basic: 1-3, Intermediate: 4-6, Advanced: 7-10).
 
+const courseSelection = 5; // Replace with the student's course number to test
+
+const level = courseSelection >= 1 && courseSelection <= 3
+  ? "Basic"
+  : courseSelection >= 4 && courseSelection <= 6
+    ? "Intermediate"
+    : courseSelection >= 7 && courseSelection <= 10
+      ? "Advanced"
+      : "Invalid Course Number"; // Optional: Handle invalid course numbers
+
+console.log(level);
 
 
 //? Question 10 : Field of Study Selection: Based on a student’s grade, determine which field they can study in:
 //?  "Engineering" (80 and above), "Economics" (60-79), or "Social Sciences" (0-59).
+
+const grade = 85; // Replace with the student's grade to test
+
+const fieldOfStudy = grade >= 80
+  ? "Engineering"
+  : grade >= 60 && grade <= 79
+    ? "Economics"
+    : grade >= 0 && grade <= 59
+      ? "Social Sciences"
+      : "Invalid Grade"; // Optional: Handle invalid grade input
+
+console.log(fieldOfStudy);
